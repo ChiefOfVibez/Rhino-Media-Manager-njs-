@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Rhino Media Manager",
-  description: "Next.js UI for Bosch Products DB",
+  title: "Bosch Product Database",
+  description: "Manage products and generate JSONs for Rhino plugin",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -11,17 +11,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className="h-full">
       <body className="min-h-screen bg-background text-foreground">
         <header className="border-b bg-card">
-          <div className="container flex items-center justify-between py-4">
-            <div className="flex items-center gap-2">
-              <div className="size-6 rounded bg-primary" />
-              <span className="font-semibold">Rhino Media Manager</span>
+          <div className="container px-2.5 py-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <h1 className="text-2xl font-bold">Bosch Product Database</h1>
+                <p className="text-sm text-muted-foreground">Manage products and generate JSONs for Rhino plugin</p>
+              </div>
+              <div className="text-sm text-muted-foreground">Products</div>
             </div>
-            <nav className="text-sm text-muted-foreground">
-              <a href="/" className="hover:text-foreground">Products</a>
-            </nav>
           </div>
         </header>
-        <main className="container py-6">{children}</main>
+        <main className="container px-2.5 py-6">{children}</main>
       </body>
     </html>
   );
